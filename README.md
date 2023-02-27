@@ -1,1 +1,1 @@
-# holbertonschool-low_level_programming
+This project is about programming c
