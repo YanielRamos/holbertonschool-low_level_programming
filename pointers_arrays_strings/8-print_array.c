@@ -2,7 +2,10 @@
 #include "main.h"
 
 /**
- *
+ * print_array - starting point
+ * @a: pointer
+ * @n: variable
+ * Return: 0 always
  */
 
 void print_array(int *a, int n)
