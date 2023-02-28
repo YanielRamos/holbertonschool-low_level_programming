@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- *
- *
- *
+ * print_rev - starting point
+ * Return: 0 succesful
+ * @s: variable
  */
 
 void print_rev(char *s)
 {
-    int a = 0;
+	int a = 0;
 
 	while (s[a] != '\0')
 	{
