@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * string_toupper - function that changes all lowercases of a string to upper case
- * @s: string
- * Return: a
+ * string_toupper - function that changes all lowercases of a string
+ * @s: variabl
+ * *Return: s
  */
 
 char *string_toupper(char *s)
@@ -17,5 +17,5 @@ char *string_toupper(char *s)
 			s[a] = s[a] - ('a' - 'A');
 		}
 	}
-	return(s);
+	return (s);
 }
