@@ -1,23 +1,23 @@
 #include "main.h"
 
-/*
- * *_strpbrk - searches for any bytes
- * @s: string
- * @accept: variable
- * Return: null
+/**
+ * *_strpbrk - searches for any set of bytes
+ * @s: string to be searched
+ * @accept: other string
+ * Return: pointer to bytes
  */
 
 char *_strpbrk(char *s, char *accept)
 {
-	char *s_ptr, *a_ptr;
+	char *a, *b;
 
-	for (s_ptr = s; *s_ptr != '\0'; s_ptr++)
+	for (a = s; *a != '\0'; a++)
 	{
-		for (a_ptr = accept; *a_ptr != '\0'; a_ptr++)
+		for (b = accept; *b != '\0'; b++)
 		{
-			if (*s_ptr == *a_ptr)
+			if (*a == *b)
 			{
-				return (s_ptr);
+				return (a);
 			}
 		}
 	}
