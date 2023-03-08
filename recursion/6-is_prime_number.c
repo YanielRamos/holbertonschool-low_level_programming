@@ -1,10 +1,12 @@
 #include "main.h"
+int is_prime_helper(int n, int i);
 
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * is_prime_number - looks for prime numbers
+ * @n: numbers being evaluated
+ * Return: 1 if prime number, otherwise 0
  */
+
 int is_prime_number(int n)
 {
 	if (n < 2)
@@ -19,12 +21,12 @@ int is_prime_number(int n)
 	{
 		return (0);
 	}
-	return (is_prime_number(n, 5));
+	return (is_prime_helper(n, 5));
 }
 
 /**
  * is_prime_helper - helps identify prime numbers
- * @n: being evaluated
+ * @n: number being evaluated
  * @i: number divisor
  * Return: 1 if prime, 0 otherwise
  */
