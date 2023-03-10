@@ -22,9 +22,7 @@ int main(int argc, char *argv[])
 	i = atoi(argv[1]);
 	b = atoi(argv[2]);
 
-	if ((result = i * b))
-	{
-		printf("%d\n", result);
-	}
+	result = i * b;
+	printf("%d\n", result);
 	return (0);
 }
