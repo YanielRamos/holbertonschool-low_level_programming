@@ -3,8 +3,8 @@
 
 /**
  * main - function that adds positive numbers
- * @argc:
- * @argv:
+ * @argc: counter
+ * @argv: vector
  * Return: 0 succesful
  */
 
@@ -14,8 +14,8 @@ int main(int argc, char *argv[])
 	int n;
 	int result = 0;
 	int c;
-	
-	
+
+
 	if (argc <= 1)
 	{
 		printf("0\n");
@@ -39,8 +39,8 @@ int main(int argc, char *argv[])
 			printf("Error\n");
 			return (1);
 		}
-	result += n;
+		result += n;
 	}
 	printf("%d\n", result);
-	return 0;
+	return (0);
 }
