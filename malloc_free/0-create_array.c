@@ -2,8 +2,8 @@
 #include <stdlib.h>
 /**
  * create_array - function that creates an array
- * @size: 
- * @c: 
+ * @size: is 98
+ * @c: is H
  * Return: Null to end
  */
 
@@ -13,10 +13,10 @@ char *create_array(unsigned int size, char c)
 	char *arr;
 	if (size == 0)
 	{
-		return (NULL);	
-	} 
+		return (NULL);
+	}
 
-	arr =(char *) malloc(size * sizeof(char));
+	arr = (char *) malloc(size * sizeof(char));
 
 	if (arr == NULL)
 	{
