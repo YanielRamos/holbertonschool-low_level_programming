@@ -4,7 +4,7 @@
 #include <stdlib.h>
 
 /**
- * str_concat - function that concatenates two string
+ * str_concat - function that concatenates two strings
  * @s1: Best
  * @s2: School
  * Return: conc to be succesful
