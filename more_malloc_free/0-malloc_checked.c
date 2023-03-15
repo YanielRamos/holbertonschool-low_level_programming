@@ -4,16 +4,16 @@
 /**
  * malloc_checked - function that allocates memory
  * @b: variable
+ * Return: ptr
  */
 
 void *malloc_checked(unsigned int b)
 {
-	void *ptr = (void *) malloc(b);
+	void *ptr = malloc(b);
 
 	if (ptr == NULL)
 	{
 		exit(98);
 	}
-	free (ptr);
 	return (ptr);
 }
