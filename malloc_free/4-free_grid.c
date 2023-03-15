@@ -3,8 +3,8 @@
 
 /**
  * free_grid - function that frees a 2 dimensional grid
- * @grid:
- * @height:
+ * @grid: variable with all the content
+ * @height:all the elements of the string
  */
 
 void free_grid(int **grid, int height)
