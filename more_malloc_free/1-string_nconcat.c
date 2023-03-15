@@ -8,6 +8,7 @@
  * @s1: first string
  * @s2: second string
  * @n: unsigned int
+ * Return: str
  */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
@@ -34,7 +35,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		n = len2;
 	}
 
-	str = malloc(len1 + n + 1 *sizeof(char));
+	str = malloc(len1 + n + 1 * sizeof(char));
 
 	if (str == NULL)
 	{
