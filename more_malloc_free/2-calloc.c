@@ -18,7 +18,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 	}
 
-	caloc = (void *) malloc(size * nmemb);
+	caloc = malloc(size * nmemb);
 	memset(caloc, 0, nmemb * size);
 	return (caloc);
 }
