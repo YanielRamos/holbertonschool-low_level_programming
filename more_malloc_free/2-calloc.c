@@ -12,13 +12,15 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *caloc;
+	unsigned int s;
 
 	if (nmemb == 0 || size == 0)
 	{
 		return (NULL);
 	}
 
-	caloc = malloc(size * nmemb);
-	memset(caloc, 0, nmemb * size);
+	s = nmemb * size;
+	caloc = malloc(s);
+	memset(caloc, 0, s);
 	return (caloc);
 }
