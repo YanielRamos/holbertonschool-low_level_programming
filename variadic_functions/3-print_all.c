@@ -15,55 +15,46 @@ void print_all(const char * const format, ...)
 	float f;
 	const char *s;
 	int b;
+	const char *y;
 	
 	va_start(yan, format);
-	b = 0;
+	b = 1;
+	y = format;
 
-	while (format[b] != '\0')
+	while (*y != '\0')
 	{
-		switch (format[b])
-		{
+		 if (!b)
+                {
+                        printf(", ");
+                }
+		b = 0;
+
+		switch (*y){
 			case 'c':
 				c = va_arg(yan, int);
 				printf("%c", c);
 				break;
 			case 'i':
-				{
 					i = va_arg(yan, int);
 					printf("%d", i);
 					break;
-				}
 			case 'f':
-				{
 					f = va_arg(yan, double);
 					printf("%f", f);
 					break;
-				}
 			case 's':
-				{
 					s = va_arg(yan, char *);
 					if (s == NULL)
-					{
 						printf("(nil)");
-					}
 					else
-					{
 						printf("%s", s);
-					}
 					break;
-				}
 			default:
-				break;
+					b = 1;
+					break;
 		}
-
-		b++;
-
-		if (format[b])
-		{
-			printf(", ");
-		}
+		y++;
 	}
-
 	printf("\n");
 	va_end(yan);
 }
