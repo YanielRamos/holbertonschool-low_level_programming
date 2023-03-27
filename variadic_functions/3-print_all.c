@@ -17,30 +17,33 @@ void print_all(const char *format, ...)
 	const char *s, *y;
 
 	va_start(yan, format);
+
 	b = 1;
 	y = format;
 
 	while (*y != '\0')
 	{
 		if (!b)
-		{
 			printf(", ");
-		}
 		b = 0;
-			switch (*y)
-			{
+		switch (*y)
+		{
 			case 'c':
-				c = va_arg(yan, int); printf("%c", c); break;
+				printf("%c", (c = va_arg(yan, int)));
+				break;
 			case 'i':
-				i = va_arg(yan, int); printf("%d", i); break;
+				printf("%d", (i = va_arg(yan, int)));
+				break;
 			case 'f':
-				f = va_arg(yan, double); printf("%f", f); break;
+				printf("%f", (f = va_arg(yan, double)));
+				break;
 			case 's':
-				s = va_arg(yan, char *); printf("%s", s == NULL ? "(nil)" : s); break;
+				printf("%s", (s = va_arg(yan, const char *)) == NULL ? "(nil)" : s);
+				break;
 			default:
 				b = 1;
 				break;
-			}
+		}
 		y++;
 	}
 	printf("\n");
