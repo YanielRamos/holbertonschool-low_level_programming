@@ -8,19 +8,15 @@
 
 int sum_dlistint(dlistint_t *head)
 {
-	dlistint_t *node = malloc(sizeof(dlistint_t));
 	int sum = 0;
-	
-	node = head;
-	node->n = head->n;
 
-	if (node == NULL)
+	if (head == NULL)
 		return (0);
 
 	while (node != NULL)
 	{
-		sum += node->n;
-		node = node->next;
+		sum += head->n;
+		node = head->next;
 	}
 
 	return (sum);
