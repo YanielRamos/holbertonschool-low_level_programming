@@ -2,6 +2,7 @@
 
 /**
  * add_dnodeint - function that adds a new node at the beg
+ * head - pointer to list
  * @n: variable with integers
  * Return: new element
  */
