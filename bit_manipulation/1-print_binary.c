@@ -16,11 +16,11 @@ void print_binary(unsigned long int n)
 		if (n & mask)
 		{
 			leading_zeros = 0;
-			_putchar('1');
+			putchar('1');
 		}
 		else if (!leading_zeros)
 		{
-			_putchar('0');
+			putchar('0');
 		}
 		mask >>= 1;
 	}
